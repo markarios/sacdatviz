@@ -1,0 +1,371 @@
+<!doctype html>
+
+<!--
+
+Ackknowledgments:  the authors and contributors of impress.js, d3js.org
+
+-->
+
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Sacramento Data Visualization Meetup | Meetup # 1| by Mark Rios @cheeseviz</title>
+    <meta name="author" content="Mark Rios" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <style>
+    .small {
+        font-size: .70em;
+    }
+    </style>
+
+
+</head>
+
+
+<body class="impress-not-supported">
+
+
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="title" class="step" data-x="0" data-y="0" data-z="0" data-scale="1">
+        <span><strong>Sacramento Data Visualization Meetup</strong>
+           <p><br><em> An Introduction to D3js and Responsive Design<em></span>
+            <p></p>
+            <p class="small"><br>slides @ <a class="small" href="https://github.com/markarios/sacdatviz">https://github.com/markarios/sacdatviz</a></p>
+            <br>
+    </div>
+
+    <div id="disclosures" class="step" data-x="-1000" data-y="-10000" data-z="0" data-scale="1">
+        <span><strong>Disclosures</strong>
+        <span class="small">
+           <br>1. We will not cover everything in d3js. 
+           <br>2. We will not go over productional level d3 code using data binding frameworks like backbone
+           <br>3. If you have problems head on over to <a href="http://stackoverflow.com/">stackoverflow</a> 
+           <br>4. We're not going to cover GIT.
+           <br>5. We're not going to cover terminal commands
+        </span>
+    </div>
+
+
+    <div id="_01" class="step" data-x="1000" data-y="1000" data-rotate="0" data-scale="1">
+        <p><strong>Goals</strong> 
+        <br><span class="small">
+        <br><p>1. To introduce D3 concepts that are foreign to a lot of people </p>
+        <br><p>2. To show you how to think about methods</p>
+        <br><p>3. To have you create your first visualization based on what you learned today</p>
+        </span>
+    </div>
+
+    <div id="_02" class="step" data-x="2000" data-y="2000" data-rotate="0" data-scale="1">
+        <p><strong>About</strong> <br/>
+        <br>
+        <p>mark.rios@statvisions.com</p>
+        <p>1-866-955-1007</p>
+        <br>
+        <p>Data Visualization (R, D3, Crossfilter) </p>
+        <br>
+        <br>Acknowledgements: 
+        <br> Scott Murray http://alignedleft.com/
+        <br> Nick Zhu https://github.com/NickQiZhu
+        <br> And Countless Others ...
+    
+
+    </div>
+
+    <div id="_03" class="step" data-x="3000" data-y="3000" data-z="0" data-rotate="0" data-scale="1">
+        <p>What's D3JS?</p>
+    </div>
+
+ 
+    <div id="_04" class="step" data-x="4000" data-y="4000" data-rotate="0" data-scale="1">
+        <p><img src="images/whatsd3.png"></p>
+        <br>
+    <p><a class="small" href="http://christopheviau.com/d3list/gallery.html">http://christopheviau.com/d3list/gallery.html</a></p>
+    <br><a class="small" href="https://www.blockspring.com/">https://www.blockspring.com/</a>
+
+        <p>Question: But what does it really look like?</p>
+    </div>
+
+    <div id="_05" class="step" data-x="5000" data-y="5000" data-z="0" data-scale="1">
+        <img height="700" src="images/thereald3pleasestandup.png">
+        <p><span class="small">9,233 lines</span></p>
+        <p></p>
+        <p>What's the barrier to entry look like?</a>
+    </div>
+
+    <div id="_06" class="step" data-x="6000" data-y="6000" data-z="0" data-rotate="0" data-scale="1"> 
+        <span class="small">
+        <br>
+        <a href="http://jsfiddle.net/enigmarm/3HL4a/13/">http://jsfiddle.net/enigmarm/3HL4a/13/</a>
+        </span>
+        <br>
+        <p>How should we prepare our mind before we start learning d3js?</p>
+    </div>
+
+    <div id="_07" class="step" data-x="7000" data-y="7000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+        <img src="images/thedom.png">
+        <p>Question: Where do you get D3?</p>
+    </div>
+
+    <div id="_08" class="step" data-x="8000" data-y="8000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+        
+        <p><strong>http://d3js.org/d3.v3.min.js</strong></p>
+        <p> or </p>
+        <p><strong>http://d3js.org</p></strong>
+        <p></p>
+        <p>Question: Once we get data how do we access it?</p>
+    </div>
+
+    <div id="_09" class="step" data-x="9000" data-y="9000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+        <p><strong>function(d){ return d;}</strong></p>
+        <br>
+        <p class="small">Question: How do we get data into our visualization?</p>
+    </div>
+
+    <div id="_10" class="step" data-x="10000" data-y="10000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+
+         <p>d3.csv("file.csv", function(data, error){ </p>
+         <p>  // your code </p>
+         <p>});</p>
+         <p></p>
+         <br>
+         <span class="small">
+         <p> 1. Your code doesn't run until after the download completes.</p>
+         <p> 2. Be aware that Javascript runs other code while your download is happening</p>
+         <p> 3. d3.csv requires a web server <a href="http://bost.ocks.org/mike/block/">http://bost.ocks.org/mike/block/</a>
+         </span>
+    </div>
+
+    <div id="_11" class="step" data-x="11000" data-y="11000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+       <p>When you think of DOM Objects remember</p>
+       <span class="small">
+        <br>
+       <p><em>1. Objects inherit properties and methods</em></p>
+       <p><em>2. No Object is ever really empty, it still has properties and methods</em></p>
+       <p><em>3. DOM objects have a hidden <strong>__data__ </strong>property</em><p> 
+       </span>
+       <br>
+        <p>Question: What does this have to do with D3js?</p>
+    </div>
+
+    <div id="_12" class="step" data-x="12000" data-y="12000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+       <p><strong>Recall that D3 is made up of many methods</strong></p>
+       <p> <img height="600" src="images/thereald3pleasestandup.png"></p>
+    </div>
+
+
+    <div id="_13" class="step" data-x="13000" data-y="13000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+       <p class="small">So when you think of the D3 object always think:</p>
+       <br>
+       <p>D3.<strong>method</strong></p>
+    </div>
+
+    <div id="_14" class="step" data-x="14000" data-y="14000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+       <p>What is data binding in the dom?</p>
+    </div>
+
+    <div id="_15" class="step" data-x="15000" data-y="15000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+        <span class="small">
+       <p> data = ["red", "blue", "yellow", "purple"];</p>
+       <p></p>
+       <p> &lt div style="background-color:red" &gt &lt/div&gt </p>
+       <p> &lt div style="background-color:blue" &gt &lt/div&gt</p>
+       <p> &lt div style="background-color:yellow" &gt &lt/div&gt</p>
+       <p> &lt div style="background-color:purple" &gt &lt/div&gt</p>        
+       <br>
+       </span>
+       <p> Question: How do we access this data?</p>
+    </div>
+
+
+    <div id="_16" class="step" data-x="16000" data-y="16000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+         <span class="small">
+         <p> data = ["red", "blue", "yellow", "purple"];</p>
+         <br>
+         <p> data[0] = "red";</p>
+         <p> data[1] = "blue";</p>
+         <p> data[2] = "yellow";</p>
+         <p> data[3] = "purple";</p>
+         <br>
+         </span>
+         <p>  0, 1, 2, 3 are called an objects index</p>
+         <br>
+         <p> Question: How do access these index numbers in D3js?</p>
+    </div>
+
+    <div id="_17" class="step" data-x="17000" data-y="17000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+        <p><strong>function(d,i){ return i;}</strong></p>
+        <br>
+        <p class="small"> Question, how do we start data binding?</p>
+    </div>
+
+    <div id="_18" class="step" data-x="18000" data-y="18000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+        <p><img src="images/d3selections.png"></p>
+        <p> Question, how should we think about selections?
+    </div>
+
+    <div id="_19" class="step" data-x="19000" data-y="19000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+        <p><img src="images/thinkingselections.png"></p>
+        <p> Now that we know how to think of selections, how do we bind data?
+    </div>
+
+    <div id="_20" class="step" data-x="20000" data-y="20000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+        <p><img src="images/databindingmethods.png"></p>
+        <p> But how should we think of these?
+    </div>
+
+
+    <div id="_21" class="step" data-x="21000" data-y="21000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+        <p><img src="images/datajoinphases.png"></p>
+        <p> But how do we use these in D3?
+    </div>
+
+     <div id="_22" class="step" data-x="22000" data-y="22000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+        <p><img src="images/enterupdateexitpattern.png"></p>
+        <p> But I need to learn more, where do I go?
+    </div>
+
+    <div id="_23" class="step" data-x="23000" data-y="23000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+        <p><img src="images/d3api.png"></p>
+        <p> What are some common methods called from the D3 API?
+    </div>
+
+    <div id="_24" class="step" data-x="24000" data-y="24000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+        <strong>Common D3 Methods: Selections</strong>
+        <span class="small">
+        <br>
+        <br>
+        <p>d3.select(selection)</p>
+        <p>d3.selectAll(selection)</p>
+        <p>d3.select(selection).remove()</p> 
+        <p>d3.select(selection).classed(foo, true)</p>
+        </span>
+        <br>
+        <p>But now give me methods for interactivty?
+    </div>
+
+      <div id="_25" class="step" data-x="25000" data-y="25000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1">
+        <strong>Common D3 Methods: Interactivity</strong>
+        <span class="small">
+        <br>
+        <br>
+        <p>selection.transition().attr("x",x0).attr("y",y0);</p><br>
+         <p>selection.transition().duration(t0); // t0 milliseconds</p><br>
+         <p>selection.on("mouseover", function(){ d3.select("this").method });</p><br>
+         <p>selection.on("click", function(){ <br>d3.select("this").method });</p>
+         </span>
+         <br>
+         <p>But how do I remember all of this?
+     </div>
+
+    <div id="_26" class="step" data-x="26000" data-y="26000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1"><strong>cheat sheets</strong>
+        <br><br>
+        <p><a href="http://www.jeromecukier.net/wp-content/uploads/2012/10/d3-cheat-sheet.pdf">http://www.jeromecukier.net/wp-content/uploads/2012/10/d3-cheat-sheet.pdf</a></p><br>
+        <p><a href="https://github.com/alignedleft/crazy-data-circles">https://github.com/alignedleft/crazy-data-circles</a></p><br>
+        <p><a href="http://bit.ly/1rElDWc">http://bit.ly/1rElDWc</a></p>
+    </div>
+
+    <div id="_27" class="step" data-x="27000" data-y="27000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1"><strong>Time To Apply Our Knowledge But First ...</strong>
+        <span class="small">
+        <p>function rand(value) { return Math.floor(value*Math.random());}</p>
+        <br>
+        <p>var colorBrewer = ['rgba(141,211,199,.25)','rgba(255,255,179,.25)','rgba(190,186,218,.25)','rgba(251,128,114,.25)'];</p>
+        <br>
+        <p>function randColor(){ return colorBrewer[Math.floor(Math.random()*4)]; };</p>
+
+        <p>for (var i = dataPoints - 1; i >= 0; i--) {
+        data.push({radius : ballRadius,x: rand(width), y: rand(height), color: randColor() }); };</p>
+        <br>
+        <a href="http://www.w3schools.com/svg/">http://www.w3schools.com/svg/</a>
+        </span>
+        <br>
+        <br>
+        <p> Now visit<a href="http://bit.ly/Ur3nkO">http://bit.ly/Ur3nkO</a> and get to work!</p>
+
+    </div>
+
+    <div id="_28" class="step" data-x="28000" data-y="28000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1"><strong>More Responsive Design With D3</strong>
+        <span class="small">
+        <br><a href="https://github.com/curran/model">https://github.com/curran/model</a>
+        <br><a href="http://www.responsinator.com">http://www.responsinator.com/</a>
+        </span>
+
+    </div>
+
+    <div id="_29" class="step" data-x="29000" data-y="29000" data-z="0" data-rotate-x="0" data-rotate="0" data-rotate-y="0" data-scale="1"><strong>Questions?</strong>
+
+    </div>
+
+
+
+    <div id="overview" class="step" data-x="0" data-y="0" data-scale="10">
+    </div>
+
+</div>
+
+
+
+
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
+
+
+
